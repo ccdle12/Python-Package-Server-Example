@@ -1,0 +1,39 @@
+version: '3'
+services:
+  project_a:
+    container_name: project_a
+    command: '/project_a/scripts/run.sh'
+    build: ./project_a
+    restart: always
+    volumes:
+        - ./project_a/:/project_a/
+    ports:
+        - 5000:5000
+    networks:
+      - example_network
+
+  project_b:
+    container_name: project_b
+    command: '/project_b/scripts/run.sh'
+    build: ./project_b
+    restart: always
+    volumes:
+      - ./project_b:/project_b
+    ports:
+      - 8000:5000
+    networks:
+      - example_network
+
+  pypi_project:
+    container_name: pypi_project
+    build: ./pypi_project
+    restart: always
+    volumes:
+      - ./pypi_project:/pypi_project
+    expose:
+      - 8080
+    networks:
+      - example_network
+
+networks:
+  example_network:

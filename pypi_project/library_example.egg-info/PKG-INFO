@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: library-example
+Version: 0.1
+Summary: Some Project to be shared
+Home-page: http://github.com/itc/library_example
+Author: Dev
+Author-email: docs@something.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: pip,library,example
+Platform: UNKNOWN
