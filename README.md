@@ -12,6 +12,8 @@ Some things to keep in mind...
 
 * In order for `project_a` and `project_b` to install `library_example`, `pypi_project` needs to be running and serving.
 
+* At this stage, it's not exactly clear on how to run `pip install library_example` in the Dockerfile itself because, when building the Dockerfile, it has no knowledge of the `pypi_project` service at that point, hence why `pip install library_example` is run as a docker-compose command, meaning after the service becomes live and joins the network, the install script is run.
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine.
