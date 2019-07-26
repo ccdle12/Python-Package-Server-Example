@@ -2,7 +2,7 @@
 
 
 from app import app
-from flask import jsonify, request
+from flask import jsonify
 from library_example import lib_example_call
 
 @app.route('/order', methods=['POST'])

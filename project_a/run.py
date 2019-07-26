@@ -1,4 +1,4 @@
-"""Entry Point for the api_gatway, serves a Flask API."""
+"""Entry Point for project_a app, serves a Flask API."""
 
 from app import app
 
