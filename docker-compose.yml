@@ -11,6 +11,8 @@ services:
         - 5000:5000
     networks:
       - example_network
+    depends_on:
+      - pypi_project
 
   project_b:
     container_name: project_b
@@ -23,6 +25,8 @@ services:
       - 8000:5000
     networks:
       - example_network
+    depends_on:
+      - pypi_project
 
   pypi_project:
     container_name: pypi_project
