@@ -1,6 +1,17 @@
 # Python-Package-Server-Example
 A reference example project for hosting a private python package server to share libraries
 
+## Background
+
+This project serves a private pypi server in a simple microserver environment. The services `project_a` and `project_b`
+rely on a package called `library_example` being served by the service `pypi_project`.
+
+Some things to keep in mind...
+
+* `project_a` and `project_b` both need to run `pip install library_example` in their containers. We are using a file `/root/.pip/pip.conf` to set a private pypi server.
+
+* In order for `project_a` and `project_b` to install `library_example`, `pypi_project` needs to be running and serving.
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine.
